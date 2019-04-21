@@ -12,3 +12,29 @@ var config = {
   firebase.initializeApp(config);
   var database = firebase.database();
 
+
+  //DONE: Create an on click submit event
+$("#submitButton").on("click", function(){
+  //DONE: grab the values of info typed into fields and save to variable
+    var trainVal = $("#trainNameField").val().trim();
+    var destinationVal = $("#destinationField").val().trim();
+    var startTimeVal = $("#startTimeField").val().trim();
+    var frequencyVal = $("#frequencyField").val().trim();
+
+    //DONE: create an object to push to the Firebase
+    var trainObject = {
+        Name: trainVal,
+        Destination: destinationVal,
+        TrainTime: startTimeVal,
+        Frequency: frequencyVal
+    };
+
+    //DONE: push the variables to the Firebase
+    database.ref().push(trainObject);
+
+});
+
+
+
+
+
