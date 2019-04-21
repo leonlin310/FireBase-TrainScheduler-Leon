@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Train Scheduler Week 7 Firebase</title>
-
+    <link rel="stylesheet" href="./assets/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
 
@@ -16,10 +16,62 @@
 
     <div class="container">
 
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h3 id="jumboMessage">Thomas the Tank Engine Schedules his Friends for Work!</h3>
+            </div>
+        </div>
 
 
+        <table class="table" id="employee-table">
+            <thead>
+                <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                </tr>
+            </thead>
 
+           <!-- Use jquery to append info to the tbody -->
+            <tbody>
 
+            </tbody>
+        </table>
+        
+        <br>
+        <br>
+        <hr>
+        <hr>
+        <br>
+        <br>
+        <form>
+                <div class="form-group">
+                    <label for="exampleTrainName">Train Name</label>
+                    <input type="text" class="form-control" id="trainNameField" aria-describedby="nameHelp"
+                        placeholder="Snow Piercer">
+                    <!-- class="form-text text-muted"></small> -->
+                </div>
+                <div class="form-group">
+                    <label for="exampleDestination">Destination</label>
+                    <input type="text" class="form-control" id="destinationField" aria-describedby="emailHelp" placeholder="Busan">
+                    <!-- <small id="Role" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                </div>
+    
+                <div class="form-group">
+                    <label for="exampleTrainTime">First Train Time (HH:mm - military time</label>
+                    <input type="text" class="form-control" id="startTimeField" placeholder="17:30">
+                </div>
+                <label for="exampleFrequency">Frequency (min)</label>
+                <input type="text" class="form-control" id="frequencyField" placeholder="45">
+               <br>
+                <div class="justify-content-md-end">
+
+                        <button type="button" id="submitButton" class="btn btn-primary">Submit</button>
+                </div>
+    
+        </form>
 
 
 
